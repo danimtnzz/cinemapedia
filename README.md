@@ -1,4 +1,5 @@
-# cinemapedia
+# Cinemapedia
+App realizada siguiendo el curso "Flutter - Móvil: De cero a experto" de Fernando Herrera 
 
 # Dev
 
