@@ -51,7 +51,6 @@ class _Slide extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          //FIXME: la imagen no se adapta al height del sizedbox, al poner un expanded tampoco se escala correctamente
           //imagen
           SizedBox(
             width: 150,
@@ -84,14 +83,17 @@ class _Slide extends StatelessWidget {
             ),
           ),
           //*Rating
-          Row(
-            children: [
-              Icon(Icons.star_half_outlined, color: Colors.yellow.shade800,),
-              const SizedBox(width: 3,), 
-              Text('${movie.voteAverage}', style: textStyles.bodyMedium?.copyWith(color: Colors.yellow.shade800),),
-              const SizedBox(width: 10,), 
-              Text('${movie.popularity}', style: textStyles.bodySmall,)
-            ],
+          SizedBox(
+            width: 150,
+            child: Row(
+              children: [
+                Icon(Icons.star_half_outlined, color: Colors.yellow.shade800,),
+                const SizedBox(width: 3,), 
+                Text('${movie.voteAverage}', style: textStyles.bodyMedium?.copyWith(color: Colors.yellow.shade800),),
+                const SizedBox(width: 10,), 
+                Text('${movie.popularity}', style: textStyles.bodySmall,)
+              ],
+            ),
           )
         ]
       ),
